@@ -80,6 +80,7 @@ class elasticsearch::config {
       file { $elasticsearch::params::pid_dir:
         ensure  => 'directory',
         group   => undef,
+        mode    => '0755',
         recurse => true,
       }
 
