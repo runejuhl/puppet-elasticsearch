@@ -78,10 +78,9 @@ class elasticsearch::config {
 
     if $elasticsearch::params::pid_dir {
       file { $elasticsearch::params::pid_dir:
-        ensure  => 'directory',
-        group   => undef,
-        mode    => '0755',
-        recurse => true,
+        ensure => 'directory',
+        group  => undef,
+        mode   => '0755',
       }
 
       if ($elasticsearch::service_providers == 'systemd') {
